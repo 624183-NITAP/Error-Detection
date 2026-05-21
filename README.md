@@ -1,4 +1,5 @@
 # Error-Detection
+[ ------] pending, going on.........................................................
 ## *What's This About :*
 This repo contains the Information and Code to accompany a mini-series on reliable communication, error detection, and correction.
 
