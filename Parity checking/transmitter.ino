@@ -1,6 +1,4 @@
 ## Arduino Code
-
-```cpp
 #include <LiquidCrystal.h>
 
 // Transmit rate in bps
@@ -64,4 +62,3 @@ void setup() {
 void loop() {
   // Nothing to repeat
 }
-```
