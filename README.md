@@ -26,3 +26,9 @@ Checksums and Hamming distance help detect errors that occur during digital comm
 CRC (cyclic redundancy check) is one of the most common methods of error detection. It uses some interesting mathematical tricks to guarantee that it can catch certain kinds of errors.
 
 - [CRC calculation](./CRC%20calculation/)
+
+# Reference
+
+Inspired by Ben Eater's videos on reliable data transmission and digital communication systems.
+
+Link to the playlist :https://youtube.com/playlist?list=PLowKtXNTBypFWff2QjXCWuSfJDWcvE0Vm&si=ecAtAqab1ytdOQZX
