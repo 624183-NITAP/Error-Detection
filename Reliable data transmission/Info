@@ -9,6 +9,16 @@ Features
 - LCD visualization of transmitted bits
 - Adjustable transmission rate
 
+Working Principle
+The message "Hello, world" is stored in the transmitter.
+Each character is converted into its 8-bit binary representation.
+Bits are transmitted sequentially through the data line.
+A dedicated clock signal synchronizes data transmission.
+The LCD displays:
+The complete message on the first row.
+The binary representation of the currently transmitted character on the second row.
+Each clock pulse indicates when a new bit is available on the data line.
+
 Concepts Learned
 
 - Digital Communication
