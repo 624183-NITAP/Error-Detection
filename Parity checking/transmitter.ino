@@ -1,10 +1,9 @@
-## Arduino Code
 #include <LiquidCrystal.h>
 
 // Transmit rate in bps
 #define TX_RATE 5
 
-// Pin assignment
+// Pin assignments
 #define TX_CLOCK 2
 #define TX_DATA 3
 #define LCD_D4 4
@@ -13,12 +12,14 @@
 #define LCD_D7 7
 #define LCD_RS 8
 #define LCD_EN 9
+#define PARITY 10
 
-const char *message = "Hello, world";
+const char *message = "Hello, world!";
 
 void setup() {
   pinMode(TX_CLOCK, OUTPUT);
   pinMode(TX_DATA, OUTPUT);
+  pinMode(PARITY, INPUT);
 
   // Initialize the LCD screen
   LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
@@ -29,7 +30,7 @@ void setup() {
   for (int byte_idx = 0; byte_idx < strlen(message); byte_idx++) {
     char tx_byte = message[byte_idx];
 
-    // Clear second line
+    // Clear the second line of the display
     lcd.noCursor();
     lcd.setCursor(0, 1);
     lcd.print("        ");
@@ -42,7 +43,7 @@ void setup() {
       digitalWrite(TX_DATA, tx_bit);
       delay((1000 / TX_RATE) / 2);
 
-      // Update LCD
+      // Update the LCD
       lcd.noCursor();
       lcd.setCursor(bit_idx, 1);
       lcd.print(tx_bit ? "1" : "0");
@@ -55,10 +56,16 @@ void setup() {
       digitalWrite(TX_CLOCK, LOW);
     }
   }
+  digitalWrite(TX_DATA, digitalRead(PARITY));
+  delay((1000 / TX_RATE) / 2);
+  digitalWrite(TX_CLOCK, HIGH);
+  delay((1000 / TX_RATE) / 2);
+  digitalWrite(TX_CLOCK, LOW);
 
   digitalWrite(TX_DATA, LOW);
 }
 
 void loop() {
-  // Nothing to repeat
+  // put your main code here, to run repeatedly:
+
 }
