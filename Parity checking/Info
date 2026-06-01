@@ -1,1 +1,43 @@
+Reliable Data Transmission with Parity Check
 
+This project demonstrates reliable serial data transmission using an Arduino Nano, separate clock and data lines, a parity bit for basic error detection, and a 16×2 LCD display for real-time visualization.
+
+Features
+-Character-by-character data transmission
+-Bit-by-bit communication using dedicated clock and data signals
+-LCD display showing transmitted characters and binary data
+-Parity bit generation and transmission
+-Basic error detection support
+-Adjustable transmission rate
+
+Working Principle
+The message "Hello, world!" is loaded into the transmitter.
+Each character is converted into its 8-bit binary representation.
+Bits are transmitted one at a time through the data line.
+A clock pulse synchronizes the sender and receiver for every bit.
+The LCD displays:
+The original message on the first row.
+The binary representation of the currently transmitted character on the second row.
+After all characters are sent, a parity bit is transmitted.
+The parity bit can be used by the receiver to detect transmission errors.
+
+Concepts Learned
+-Digital Communication Systems
+-Synchronous Data Transmission
+-Clock and Data Signal Separation
+-Binary Data Representation
+-Parity-Based Error Detection
+-LCD Interfacing with Arduino
+-Embedded Systems Programming
+-Transmission Format
+[8 Data Bits] → [Parity Bit]
+
+Example:
+
+Character: A
+Binary:    01000001
+Parity:    0 (Even Parity)
+
+Reference
+
+Inspired by the digital communication and reliable data transmission concepts explained by Ben Eater, focusing on clocked communication, synchronization, and error detection techniques.
