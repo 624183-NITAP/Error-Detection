@@ -1,5 +1,5 @@
 # Error-Detection
-[ ------] pending, going on.........................................................
+
 ## *What's This About :*
 This repo contains the Information and Code to accompany a mini-series on reliable communication, error detection, and correction.
 
@@ -14,18 +14,6 @@ Reliable data transmission ensures that binary data sent from a transmitter reac
 A parity checker verifies whether the transmitted binary data contains errors by checking the parity bit attached to the data.
 
 - [Parity checking](./Parity%20checking/)
-
-## Checksums and Hamming distance
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1f22063b-f731-4161-9430-6a11192d5323" />
-Checksums and Hamming distance help detect errors that occur during digital communication due to noise, interference, or signal corruption.
-
-- [Checksums and Hamming distance](./Checksums%20and%20Hamming%20distance/)
-
-## CRC calculation
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/67727298-3602-4107-a922-091d4f970a41" />
-CRC (cyclic redundancy check) is one of the most common methods of error detection. It uses some interesting mathematical tricks to guarantee that it can catch certain kinds of errors.
-
-- [CRC calculation](./CRC%20calculation/)
 
 # Reference
 
